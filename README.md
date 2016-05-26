@@ -1,7 +1,7 @@
 ## Dactl Configuration for Measurement Computing USB-1208FS
 
-This configuration file works with the [Dactl]https://github.com/coanda/dactl data
-acquisition and control application and the [plugin interface](https://github.com/coanda/dactl-mcc-plugin).
+This configuration file works with the [Dactl](https://github.com/coanda/dactl) data
+acquisition and control application and [USB-1208FS plugin interface](https://github.com/coanda/dactl-mcc-plugin).
 It will allow you to use the Measurement Computing USB-1208FS data acquisition
 device to control analog outputs and display analog inputs on a graph.
 
