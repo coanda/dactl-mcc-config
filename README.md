@@ -23,9 +23,9 @@ dactl -f path_to_file/dactl.xml
 2. Click the "Connect" button.
 3. Expand the "Test Functions" section.
 
-..* Click the "Blink LED" button to verify the connection.
-..* Select an input channel and range to test the inputs.
-..* Use the sliders to change the analog output voltages.
+  - Click the "Blink LED" button to verify the connection.
+  - Select an input channel and range to test the inputs.
+  - Use the sliders to change the analog output voltages.
 
 4. Expand the "Acquisiton Settings" section to change the sampling rate.
 5. Click the "Acquire" button to transfer control of the device to the main
@@ -37,9 +37,9 @@ dactl -f path_to_file/dactl.xml
 8. Double click on a chart to change the settings.
 9. Click the "Start" button to begin logging the data to a file. You will need
    to create the /srv/data/dactl directory with read/write access.
-10. Let us know what you think.
 
 ### Contact Info
 
 geoff.johnson@coanda.ca
+
 stephen.roy@coanda.ca
