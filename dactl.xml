@@ -28,6 +28,8 @@
       <ui:object id="usb1208fs-ctl0" type="plugin-control" parent="box0-0">
         <ui:property name="sampling-rate">50</ui:property>
         <ui:property name="acquisition-mode">software</ui:property>
+        <ui:property name="porta-direction">out</ui:property>
+        <ui:property name="portb-direction">in</ui:property>
         <ui:property name="chref">/ai00</ui:property>
         <ui:property name="chref">/ai00</ui:property>
         <ui:property name="chref">/ai01</ui:property>
@@ -40,6 +42,23 @@
         <ui:property name="chref">/ai08</ui:property>
         <ui:property name="chref">/ao00</ui:property>
         <ui:property name="chref">/ao01</ui:property>
+        <ui:property name="chref">/do00</ui:property>
+        <ui:property name="chref">/do01</ui:property>
+        <ui:property name="chref">/do02</ui:property>
+        <ui:property name="chref">/do03</ui:property>
+        <ui:property name="chref">/do04</ui:property>
+        <ui:property name="chref">/do05</ui:property>
+        <ui:property name="chref">/do06</ui:property>
+        <ui:property name="chref">/do07</ui:property>
+        <ui:property name="chref">/di00</ui:property>
+        <ui:property name="chref">/di01</ui:property>
+        <ui:property name="chref">/di02</ui:property>
+        <ui:property name="chref">/di03</ui:property>
+        <ui:property name="chref">/di04</ui:property>
+        <ui:property name="chref">/di05</ui:property>
+        <ui:property name="chref">/di06</ui:property>
+        <ui:property name="chref">/di07</ui:property>
+
       </ui:object>
     </plugin>
   </plugins>
@@ -93,10 +112,46 @@
               <ui:object id="cat2ent00" type="tree-entry" chref="/ao00"/>
               <ui:object id="cat2ent01" type="tree-entry" chref="/ao01"/>
             </ui:object>
-
           </ui:object>
+
           <ui:object id="ao-ctl0" type="ao" ref="/ao00"/>
           <ui:object id="ao-ctl1" type="ao" ref="/ao01"/>
+
+          <ui:object id="box0-0-0" type="box">
+            <ui:property name="orientation">horizontal</ui:property>
+            <ui:property name="spacing">5</ui:property>
+            <ui:object id="d-ctl0" type="digital" ref="/do00"/>
+            <ui:object id="d-ctl1" type="digital" ref="/do01"/>
+            <ui:object id="d-ctl2" type="digital" ref="/do02"/>
+            <ui:object id="d-ctl3" type="digital" ref="/do03"/>
+          </ui:object>
+
+          <ui:object id="box0-0-1" type="box">
+            <ui:property name="orientation">horizontal</ui:property>
+            <ui:property name="spacing">5</ui:property>
+            <ui:object id="d-ctl4" type="digital" ref="/do04"/>
+            <ui:object id="d-ctl5" type="digital" ref="/do05"/>
+            <ui:object id="d-ctl6" type="digital" ref="/do06"/>
+            <ui:object id="d-ctl7" type="digital" ref="/do07"/>
+          </ui:object>
+
+          <ui:object id="box0-0-2" type="box">
+            <ui:property name="orientation">horizontal</ui:property>
+            <ui:property name="spacing">5</ui:property>
+            <ui:object id="d-ctl8" type="digital" ref="/di00"/>
+            <ui:object id="d-ctl9" type="digital" ref="/di01"/>
+            <ui:object id="d-ctl10" type="digital" ref="/di02"/>
+            <ui:object id="d-ctl11" type="digital" ref="/di03"/>
+          </ui:object>
+
+          <ui:object id="box0-0-3" type="box">
+            <ui:property name="orientation">horizontal</ui:property>
+            <ui:property name="spacing">5</ui:property>
+            <ui:object id="d-ctl12" type="digital" ref="/di04"/>
+            <ui:object id="d-ctl13" type="digital" ref="/di05"/>
+            <ui:object id="d-ctl14" type="digital" ref="/di06"/>
+            <ui:object id="d-ctl15" type="digital" ref="/di07"/>
+          </ui:object>
         </ui:object>
 
         <ui:object id="box0-1" type="box">
@@ -384,6 +439,102 @@
       <cld:property name="calref">/cal101</cld:property>
     </cld:object>
 
+    <cld:object id="do00" type="channel" ref="/" ctype="digital" direction="output">
+      <cld:property name="tag">PORTA0</cld:property>
+      <cld:property name="desc">Port A bit 0</cld:property>
+      <cld:property name="num">0</cld:property>
+    </cld:object>
+
+    <cld:object id="do01" type="channel" ref="/" ctype="digital" direction="output">
+      <cld:property name="tag">PORTA1</cld:property>
+      <cld:property name="desc">Port A bit 1</cld:property>
+      <cld:property name="num">1</cld:property>
+    </cld:object>
+
+    <cld:object id="do02" type="channel" ref="/" ctype="digital" direction="output">
+      <cld:property name="tag">PORTA2</cld:property>
+      <cld:property name="desc">Port A bit 2</cld:property>
+      <cld:property name="num">2</cld:property>
+    </cld:object>
+
+    <cld:object id="do03" type="channel" ref="/" ctype="digital" direction="output">
+      <cld:property name="tag">PORTA3</cld:property>
+      <cld:property name="desc">Port A bit 3</cld:property>
+      <cld:property name="num">3</cld:property>
+    </cld:object>
+
+    <cld:object id="do04" type="channel" ref="/" ctype="digital" direction="output">
+      <cld:property name="tag">PORTA4</cld:property>
+      <cld:property name="desc">Port A bit 4</cld:property>
+      <cld:property name="num">4</cld:property>
+    </cld:object>
+
+    <cld:object id="do05" type="channel" ref="/" ctype="digital" direction="output">
+      <cld:property name="tag">PORTA5</cld:property>
+      <cld:property name="desc">Port A bit 5</cld:property>
+      <cld:property name="num">5</cld:property>
+    </cld:object>
+
+    <cld:object id="do06" type="channel" ref="/" ctype="digital" direction="output">
+      <cld:property name="tag">PORTA6</cld:property>
+      <cld:property name="desc">Port A bit 6</cld:property>
+      <cld:property name="num">6</cld:property>
+    </cld:object>
+
+    <cld:object id="do07" type="channel" ref="/" ctype="digital" direction="output">
+      <cld:property name="tag">PORTA7</cld:property>
+      <cld:property name="desc">Port A bit 7</cld:property>
+      <cld:property name="num">7</cld:property>
+    </cld:object>
+
+    <cld:object id="di00" type="channel" ref="/" ctype="digital" direction="input">
+      <cld:property name="tag">PORTB0</cld:property>
+      <cld:property name="desc">Port B bit 0</cld:property>
+      <cld:property name="num">8</cld:property>
+    </cld:object>
+
+    <cld:object id="di01" type="channel" ref="/" ctype="digital" direction="input">
+      <cld:property name="tag">PORTB1</cld:property>
+      <cld:property name="desc">Port B bit 1</cld:property>
+      <cld:property name="num">9</cld:property>
+    </cld:object>
+
+    <cld:object id="di02" type="channel" ref="/" ctype="digital" direction="input">
+      <cld:property name="tag">PORTB2</cld:property>
+      <cld:property name="desc">Port B bit 2</cld:property>
+      <cld:property name="num">10</cld:property>
+    </cld:object>
+
+    <cld:object id="di03" type="channel" ref="/" ctype="digital" direction="input">
+      <cld:property name="tag">PORTB3</cld:property>
+      <cld:property name="desc">Port B bit 3</cld:property>
+      <cld:property name="num">11</cld:property>
+    </cld:object>
+
+    <cld:object id="di04" type="channel" ref="/" ctype="digital" direction="input">
+      <cld:property name="tag">PORTB4</cld:property>
+      <cld:property name="desc">Port B bit 4</cld:property>
+      <cld:property name="num">12</cld:property>
+    </cld:object>
+
+    <cld:object id="di05" type="channel" ref="/" ctype="digital" direction="input">
+      <cld:property name="tag">PORTB5</cld:property>
+      <cld:property name="desc">Port B bit 5</cld:property>
+      <cld:property name="num">13</cld:property>
+    </cld:object>
+
+    <cld:object id="di06" type="channel" ref="/" ctype="digital" direction="input">
+      <cld:property name="tag">PORTB6</cld:property>
+      <cld:property name="desc">Port B bit 6</cld:property>
+      <cld:property name="num">14</cld:property>
+    </cld:object>
+
+    <cld:object id="di07" type="channel" ref="/" ctype="digital" direction="input">
+      <cld:property name="tag">PORTB7</cld:property>
+      <cld:property name="desc">Port B bit 7</cld:property>
+      <cld:property name="num">15</cld:property>
+    </cld:object>
+
     <cld:object id="cal00" type="calibration">
       <cld:property name="units">Volts</cld:property>
       <cld:object id="cft0" type="coefficient">
@@ -586,6 +737,14 @@
         <cld:object id="col10" type="column" chref="/ai10"/>
         <cld:object id="col11" type="column" chref="/ao00"/>
         <cld:object id="col12" type="column" chref="/ao01"/>
+        <cld:object id="col13" type="column" chref="/do00"/>
+        <cld:object id="col14" type="column" chref="/do01"/>
+        <cld:object id="col15" type="column" chref="/do02"/>
+        <cld:object id="col16" type="column" chref="/do03"/>
+        <cld:object id="col17" type="column" chref="/do04"/>
+        <cld:object id="col18" type="column" chref="/do05"/>
+        <cld:object id="col19" type="column" chref="/do06"/>
+        <cld:object id="col20" type="column" chref="/do07"/>
       </cld:object>
     </cld:object>
 
