@@ -58,7 +58,7 @@
         <ui:property name="chref">/di05</ui:property>
         <ui:property name="chref">/di06</ui:property>
         <ui:property name="chref">/di07</ui:property>
-        <ui:property name="chref">/raw00</ui:property>
+        <!--<ui:property name="chref">/raw00</ui:property>-->
 
       </ui:object>
     </plugin>
@@ -98,7 +98,7 @@
               <ui:object id="cat0ent05" type="tree-entry" chref="/ai05"/>
               <ui:object id="cat0ent06" type="tree-entry" chref="/ai06"/>
               <ui:object id="cat0ent07" type="tree-entry" chref="/ai07"/>
-              <ui:object id="cat0ent08" type="tree-entry" chref="/raw00"/>
+              <!--<ui:object id="cat0ent08" type="tree-entry" chref="/raw00"/>-->
             </ui:object>
 
             <ui:object id="cat1" type="tree-category">
@@ -537,13 +537,15 @@
       <cld:property name="num">15</cld:property>
     </cld:object>
 
-    <cld:object id="raw00" type="channel" ref="/" ctype="raw" direction="input">
-      <cld:property name="tag">Counter</cld:property>
-      <cld:property name="desc">A 32 bit counter</cld:property>
-      <cld:property name="num">0</cld:property>
-      <cld:property name="calref">/cal200</cld:property>
-      <!--<cld:property name="data-type">uint8</cld:property>-->
-    </cld:object>
+    <!--
+       -<cld:object id="raw00" type="channel" ref="/" ctype="raw" direction="input">
+       -  <cld:property name="tag">Counter</cld:property>
+       -  <cld:property name="desc">A 32 bit counter</cld:property>
+       -  <cld:property name="num">0</cld:property>
+       -  <cld:property name="calref">/cal200</cld:property>
+       -  [><cld:property name="data-type">uint8</cld:property><]
+       -</cld:object>
+       -->
 
     <cld:object id="cal200" type="calibration">
       <cld:property name="units">Counts</cld:property>
@@ -768,7 +770,7 @@
         <cld:object id="col19" type="column" chref="/do05"/>
         <cld:object id="col20" type="column" chref="/do06"/>
         <cld:object id="col21" type="column" chref="/do07"/>
-        <cld:object id="col22" type="column" chref="/raw00"/>
+        <!--<cld:object id="col22" type="column" chref="/raw00"/>-->
       </cld:object>
     </cld:object>
 
