@@ -214,50 +214,6 @@
                   <ui:property name="stride">1</ui:property>
                 </ui:object>
               </ui:object>
-
-              <ui:object id="tr0-1" type="trace" ttype="real-time">
-                <ui:property name="color">rgb(0,128,0)</ui:property>
-                <ui:property name="line-weight">1</ui:property>
-                <ui:property name="draw-type">line</ui:property>
-                <ui:property name="points">1000</ui:property>
-                <ui:object id="ds0-1" type="dataseries" ref="/ai01">
-                  <ui:property name="buffer-size">1000</ui:property>
-                  <ui:property name="stride">1</ui:property>
-                </ui:object>
-              </ui:object>
-
-              <ui:object id="tr0-2" type="trace" ttype="real-time">
-                <ui:property name="color">rgb(0,0,255)</ui:property>
-                <ui:property name="line-weight">1</ui:property>
-                <ui:property name="draw-type">line</ui:property>
-                <ui:property name="points">1000</ui:property>
-                <ui:object id="ds0-2" type="dataseries" ref="/ai02">
-                  <ui:property name="buffer-size">1000</ui:property>
-                  <ui:property name="stride">1</ui:property>
-                </ui:object>
-              </ui:object>
-
-              <ui:object id="tr0-3" type="trace" ttype="real-time">
-                <ui:property name="color">rgb(255,165,0)</ui:property>
-                <ui:property name="line-weight">1</ui:property>
-                <ui:property name="draw-type">line</ui:property>
-                <ui:property name="points">1000</ui:property>
-                <ui:object id="ds0-3" type="dataseries" ref="/ai03">
-                  <ui:property name="buffer-size">1000</ui:property>
-                  <ui:property name="stride">1</ui:property>
-                </ui:object>
-              </ui:object>
-
-              <ui:object id="tr0-4" type="trace" ttype="real-time">
-                <ui:property name="color">rgb(92,53,102)</ui:property>
-                <ui:property name="line-weight">1</ui:property>
-                <ui:property name="draw-type">line</ui:property>
-                <ui:property name="points">1000</ui:property>
-                <ui:object id="ds0-3" type="dataseries" ref="/ai04">
-                  <ui:property name="buffer-size">1000</ui:property>
-                  <ui:property name="stride">1</ui:property>
-                </ui:object>
-              </ui:object>
             </ui:object>
 
             <ui:object id="chart1" type="rt-chart">
@@ -301,7 +257,55 @@
                 <ui:property name="line-weight">2</ui:property>
                 <ui:property name="draw-type">line</ui:property>
                 <ui:property name="points">1000</ui:property>
-                <ui:object id="ds1-0" type="dataseries" ref="/ai08">
+                <ui:object id="ds1-0" type="dataseries" ref="/ai01">
+                  <ui:property name="buffer-size">1000</ui:property>
+                  <ui:property name="stride">1</ui:property>
+                </ui:object>
+              </ui:object>
+            </ui:object>
+
+            <ui:object id="chart2" type="rt-chart">
+              <ui:property name="title">Differential</ui:property>
+              <ui:property name="height-min">100</ui:property>
+              <ui:property name="width-min">100</ui:property>
+              <ui:property name="refresh-ms">33</ui:property>
+              <ui:property name="show-grid">true</ui:property>
+              <ui:property name="show-grid-border">true</ui:property>
+              <ui:property name="show-title">true</ui:property>
+              <ui:property name="reverse-x-axis">false</ui:property>
+              <ui:property name="show-x-axis-label">true</ui:property>
+              <ui:property name="rotate-x-axis-label">false</ui:property>
+              <ui:property name="show-y-axis-label">true</ui:property>
+              <ui:property name="rotate-y-axis-label">true</ui:property>
+
+              <ui:object id="ax0" type="chart-axis">
+                <ui:property name="label">Time [s]</ui:property>
+                <ui:property name="orientation">horizontal</ui:property>
+                <ui:property name="min">0.000000</ui:property>
+                <ui:property name="max">10.000000</ui:property>
+                <ui:property name="div-major">10</ui:property>
+                <ui:property name="div-minor">4</ui:property>
+                <ui:property name="show-label">true</ui:property>
+                <ui:property name="show-major-labels">true</ui:property>
+              </ui:object>
+
+              <ui:object id="ax1" type="chart-axis">
+                <ui:property name="label">Voltage [V]</ui:property>
+                <ui:property name="orientation">vertical</ui:property>
+                <ui:property name="min">-10.000000</ui:property>
+                <ui:property name="max">10.000000</ui:property>
+                <ui:property name="div-major">10</ui:property>
+                <ui:property name="div-minor">4</ui:property>
+                <ui:property name="show-label">true</ui:property>
+                <ui:property name="show-major-labels">true</ui:property>
+              </ui:object>
+
+              <ui:object id="tr2-0" type="trace" ttype="real-time">
+                <ui:property name="color">rgb(78,154,6)</ui:property>
+                <ui:property name="line-weight">2</ui:property>
+                <ui:property name="draw-type">line</ui:property>
+                <ui:property name="points">1000</ui:property>
+                <ui:object id="ds2-0" type="dataseries" ref="/ai02">
                   <ui:property name="buffer-size">1000</ui:property>
                   <ui:property name="stride">1</ui:property>
                 </ui:object>
