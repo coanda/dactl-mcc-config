@@ -541,15 +541,14 @@
       <cld:property name="num">15</cld:property>
     </cld:object>
 
-    <!--
-       -<cld:object id="raw00" type="channel" ref="/" ctype="raw" direction="input">
-       -  <cld:property name="tag">Counter</cld:property>
-       -  <cld:property name="desc">A 32 bit counter</cld:property>
-       -  <cld:property name="num">0</cld:property>
-       -  <cld:property name="calref">/cal200</cld:property>
-       -  [><cld:property name="data-type">uint8</cld:property><]
-       -</cld:object>
-       -->
+    
+    <cld:object id="raw00" type="channel" ref="/" ctype="raw" direction="input">
+      <cld:property name="tag">Counter</cld:property>
+      <cld:property name="desc">A 32 bit counter</cld:property>
+      <cld:property name="num">0</cld:property>
+      <cld:property name="calref">/cal200</cld:property>
+      <cld:property name="data-type">uint8</cld:property>
+    </cld:object>
 
     <cld:object id="cal200" type="calibration">
       <cld:property name="units">Counts</cld:property>
